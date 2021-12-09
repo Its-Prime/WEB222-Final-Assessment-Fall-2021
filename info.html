@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Info | Md Yasin Al Sakib</title>
+
+    <meta charset="UTF-8" />
+    <meta name="description" content="Info" />
+    <meta name="keywords" content="Info" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="normalize.css" />
+    <script src="info.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <img src="logo.jpg" alt="logo_image" />
+      <h1>Info</h1>
+    </header>
+
+    <div id="main_sections">
+      <nav>
+        <ul>
+          <li><a class="menu_link" href="honesty.html">HOME</a></li>
+          <li><a class="menu_link active_link" href="info.html">INFO</a></li>
+          <li><a class="menu_link" href="reflection.html">REFLECTION</a></li>
+        </ul>
+      </nav>
+
+      <main>
+        <h2>Sign up:</h2>
+
+        <form
+          action="https://httpbin.org/post"
+          target="_blank"
+          method="post"
+          name="signup"
+          onsubmit="return error_validation()"
+        >
+          <label for="first_name">First name:</label><br />
+          <input
+            type="text"
+            id="first_name"
+            name="first_name"
+            placeholder="Your First Name"
+            onkeypress="return (event.charCode > 64 && event.charCode < 91) || 
+            (event.charCode > 96 && event.charCode < 123) || 
+            (event.charCode==32)"
+            style="text-transform: capitalize"
+            required
+          /><br />
+          <label for="last_name">Last name:</label><br />
+          <input
+            type="text"
+            id="last_name"
+            name="last_name"
+            placeholder="Your Last Name"
+            onkeypress="return (event.charCode > 64 && event.charCode < 91) || 
+            (event.charCode > 96 && event.charCode < 123) || 
+            (event.charCode==32)"
+            style="text-transform: capitalize"
+            required
+          /><br />
+          <label for="password1">Password:</label><br />
+          <input
+            type="password"
+            id="password1"
+            name="password1"
+            placeholder="******"
+            required
+          /><br />
+          <label for="password2">Confirm Password:</label><br />
+          <input
+            type="password"
+            id="password2"
+            name="password2"
+            placeholder="******"
+            required
+          /><br />
+          <label for="user_name">User name:</label><br />
+          <input
+            type="text"
+            id="user_name"
+            name="user_name"
+            placeholder="Username"
+            required
+          />
+
+          <p class="education_status">Education Status:</p>
+          <br />
+          <input
+            type="radio"
+            id="graduated"
+            class="education_status"
+            name="graduated"
+            value="Graduated"
+          />
+          <label for="graduated">Graduated</label><br />
+          <input
+            type="radio"
+            id="enrolled"
+            class="education_status"
+            name="education_status"
+            value="Current enrolled"
+          />
+          <label for="enrolled">Current enrolled</label><br />
+          <input
+            type="radio"
+            id="not_grad"
+            class="education_status"
+            name="education_status"
+            value="Did not graduate"
+          />
+          <label for="not_grad">Did not graduate</label><br />
+
+          <label for="e_mail">E-mail:</label><br />
+          <input
+            type="email"
+            id="e_mail"
+            name="e_mail"
+            placeholder="abc@domain.com"
+            required
+          /><br />
+          <label for="age">Age:</label><br />
+          <input
+            type="number"
+            id="age"
+            name="age"
+            min="18"
+            max="60"
+            placeholder="18 - 60"
+          /><br />
+          <input type="hidden" name="lastName" id="lastName" value="Sakib" />
+          <input
+            type="hidden"
+            name="studentId"
+            id="studentId"
+            value="120616206"
+          />
+          <input type="reset" id="reset" value="Reset" />
+          <input type="submit" id="submit" value="Submit" />
+        </form>
+      </main>
+
+      <aside></aside>
+    </div>
+
+    <footer>
+      <p>
+        Md Yasin Al Sakib &copy; 2021
+        <a
+          class="git_link"
+          href="https://github.com/Its-Prime/WEB222-Final-Assessment-Fall-2021"
+          >GitHub Link</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>
