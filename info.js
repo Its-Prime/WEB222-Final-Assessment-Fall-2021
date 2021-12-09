@@ -11,7 +11,7 @@ function error_validation() {
 
   var validation = true;
 
-  if (pass1.length != 6) {
+  if (pass1.length < 6) {
     validation = false;
     var error_text = document.createTextNode(
       "Password must be 6 characters in length"
